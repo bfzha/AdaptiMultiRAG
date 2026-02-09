@@ -152,6 +152,24 @@ python backend/init_db.py
 **PostgreSQL**: LangGraph 会自动创建所需的表。
 
 #### 2.3 启动 Milvus 向量数据库
+```
+更新
+| 配置项 | 新值 |
+|--------|------|
+| MySQL | rag_user:rag_password@localhost:3306/rag_db |
+| PostgreSQL | rag_user:rag_password@localhost:5432/rag_checkpoint |
+启动数据库并初始化：
+cd rag-backend/backend/rag/storage
+# 启动所有数据库
+docker compose -f docker-compose.full.yml up -d
+# 等待启动完成（约30秒）
+sleep 30
+# 验证服务
+docker compose -f docker-compose.full.yml ps
+# 初始化MySQL表结构
+cd rag-backend
+python backend/init_db.py
+```
 
 ```bash
 cd rag-backend/backend/rag/storage

@@ -1,0 +1,37 @@
+services:
+  mineru-api:
+    image: quincyqiang/mineru:0.3-models
+    container_name: mineru-api
+    restart: always
+    profiles: ["api"]
+    ports:
+      - "8001:8001"
+    environment:
+      MINERU_MODEL_SOURCE: local
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+
+  mineru-gradio:
+    image: quincyqiang/mineru:0.3-models
+    container_name: mineru-gradio
+    restart: always
+    profiles: ["gradio"]
+    ports:
+      - "7860:7860"
+    environment:
+      MINERU_MODEL_SOURCE: local
+    command: /bin/bash -c "source /opt/mineru_venv/bin/activate && gradio_app"
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
