@@ -1,5 +1,9 @@
 # AdaptiMultiRAG - 面向科研技术文档的多RAG自适应智能体系统
 
+```
+docker start eb1 0e6 d26 ccc 670 d6e
+```
+
 基于 LangGraph 和 Crawl4AI 构建的自适应多RAG智能体系统,专门面向科研技术文档处理。
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)

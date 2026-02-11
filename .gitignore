@@ -23,6 +23,7 @@ MANIFEST
 *.log
 *.pot
 *.pyc
+*.mp4
 .pytest_cache/
 .coverage
 htmlcov/
