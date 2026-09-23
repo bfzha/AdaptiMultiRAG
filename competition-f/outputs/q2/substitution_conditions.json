@@ -1,0 +1,5 @@
+{
+  "quality_increase": 0.1,
+  "equivalent_delta_N_at_N=1B": 0.009005050815669356,
+  "interpretation": "Delta N such that raising Q by 0.1 matches loss change from scaling N"
+}

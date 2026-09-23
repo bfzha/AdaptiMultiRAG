@@ -1,0 +1,4 @@
+source_file,mean,count
+arxiv_part-synth.jsonl.xz,0.4994847225299899,5000
+github_part-synth.jsonl.xz,0.49995602457826654,8000
+slimpajama_quality_signal_sample.jsonl.xz,0.4995131139730118,56000

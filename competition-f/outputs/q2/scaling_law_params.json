@@ -1,0 +1,28 @@
+{
+  "params": {
+    "L_inf": 2.795259362174905,
+    "A": 1.2046940340371792,
+    "alpha": 0.3388044396540661,
+    "beta": 0.2787015020765214,
+    "r2": 0.9993025915849442,
+    "gamma": 0.004014663655271399,
+    "r2_b6": 0.6226500666856822,
+    "n_points": 1674
+  },
+  "elasticities_at_median": {
+    "epsilon_N": -0.04239395745689868,
+    "epsilon_D": -0.0348733907804446,
+    "epsilon_Q": 0.0005023472548916773,
+    "L": 3.1950499013037303
+  },
+  "substitution": {
+    "quality_increase": 0.1,
+    "equivalent_delta_N_at_N=1B": 0.009005050815669356,
+    "interpretation": "Delta N such that raising Q by 0.1 matches loss change from scaling N"
+  },
+  "validation": {
+    "cerebras_rmse": 0.03355619409004523,
+    "baseline_rmse": 0.13033232499490788
+  },
+  "Q_baseline": 0.4575375928980582
+}
