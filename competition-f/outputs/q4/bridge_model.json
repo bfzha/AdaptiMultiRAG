@@ -1,0 +1,31 @@
+{
+  "LB_IFEval": {
+    "intercept": 78.18415690686581,
+    "coef_log_loss": -13.145008226444517
+  },
+  "LB_BBH": {
+    "intercept": 83.97328433270258,
+    "coef_log_loss": -19.041217533843312
+  },
+  "LB_MATH": {
+    "intercept": 80.40519943679536,
+    "coef_log_loss": -15.722439382713262
+  },
+  "LB_GPQA": {
+    "intercept": 79.31740470169028,
+    "coef_log_loss": -14.730661977262042
+  },
+  "LB_MUSR": {
+    "intercept": 82.63182936069511,
+    "coef_log_loss": -17.230268304957978
+  },
+  "LB_MMLU_PRO": {
+    "intercept": 82.87752021551375,
+    "coef_log_loss": -18.233548353781348
+  },
+  "high_comparability_primary": {
+    "intercept": 85.87579087899456,
+    "coef": -24.184200411072606,
+    "n": 7
+  }
+}

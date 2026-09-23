@@ -1,0 +1,47 @@
+{
+  "bridge": {
+    "LB_IFEval": {
+      "intercept": 78.18415690686581,
+      "coef_log_loss": -13.145008226444517
+    },
+    "LB_BBH": {
+      "intercept": 83.97328433270258,
+      "coef_log_loss": -19.041217533843312
+    },
+    "LB_MATH": {
+      "intercept": 80.40519943679536,
+      "coef_log_loss": -15.722439382713262
+    },
+    "LB_GPQA": {
+      "intercept": 79.31740470169028,
+      "coef_log_loss": -14.730661977262042
+    },
+    "LB_MUSR": {
+      "intercept": 82.63182936069511,
+      "coef_log_loss": -17.230268304957978
+    },
+    "LB_MMLU_PRO": {
+      "intercept": 82.87752021551375,
+      "coef_log_loss": -18.233548353781348
+    },
+    "high_comparability_primary": {
+      "intercept": 85.87579087899456,
+      "coef": -24.184200411072606,
+      "n": 7
+    }
+  },
+  "decomposition": {
+    "beta_log_N": 0.07916659404260752,
+    "beta_year": -0.0029292993419479064,
+    "intercept": 55.66926234475449,
+    "scale_contribution_proxy": 0.26113630169074115,
+    "tech_contribution_proxy": -0.02636369407753116,
+    "total_range": 31.580314648476076,
+    "scale_share": 0.9083001615701513,
+    "tech_share": 0.09169980364724077,
+    "r2": 0.0001597820303446129
+  },
+  "c8_models_aggregated": 50,
+  "forecast_12m_last": 54.85856527063685,
+  "forecast_24m_last": 54.87709699081903
+}

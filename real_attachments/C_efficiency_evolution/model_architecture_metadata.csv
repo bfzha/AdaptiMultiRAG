@@ -1,0 +1,5 @@
+model_name,n_layers,n_heads,hidden_size,vocab_size,max_position_embeddings,training_tokens_B
+pythia-1.4b,24,16,2048,50304,2048,300
+llama-2-7b,32,32,4096,32000,4096,2000
+mistral-7b,32,32,4096,32000,8192,8000
+qwen2-7b,28,28,3584,151936,32768,7000
