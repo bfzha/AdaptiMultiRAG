@@ -1,5 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi import APIRouter, Depends
 from backend.param.auth import LoginRequest, RegisterRequest
 from backend.param.common import Response
 from backend.service import auth

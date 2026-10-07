@@ -135,34 +135,33 @@ async def get_user_by_email(email: str) -> Optional[User]:
 async def login(login_request: LoginRequest) -> Response:
     """用户登录"""
     logger = get_logger(__name__)
-    logger.info(f"开始登录请求 - 邮箱: {login_request.email}")
 
     try:
-        logger.info("开始用户认证")
         user = await authenticate_user(login_request.email, login_request.password)
         if not user:
-            logger.warning(f"用户认证失败 - 邮箱: {login_request.email}")
-            return Response.error("邮箱或密码错误")
-
-        logger.info(f"用户认证成功 - 用户: {user.username}")
+            logger.warning("用户登录认证失败")
+            raise HTTPException(status_code=401, detail="邮箱或密码错误")
 
         # 生成token，使用user.id作为subject
-        logger.info("开始生成token")
         token = create_token(data={"sub": str(user.id)})
-        logger.info("token生成成功")
 
-        result = Response.success(
+        logger.info("用户登录成功 - 用户ID: %s", user.id)
+        return Response.success(
             {
                 "access_token": token,
                 "token_type": "bearer",
-                "user": {"username": user.username, "email": user.email},
+                "user": {
+                    "id": user.id,
+                    "username": user.username,
+                    "email": user.email,
+                },
             }
         )
-        logger.info("登录成功，返回响应")
-        return result
-    except Exception as e:
-        logger.error(f"登录过程中发生错误: {str(e)}")
-        return Response.error(f"登录失败: {str(e)}")
+    except HTTPException:
+        raise
+    except Exception:
+        logger.exception("登录过程中发生内部错误")
+        raise HTTPException(status_code=500, detail="登录服务暂时不可用")
 
 
 async def register(register_request: RegisterRequest) -> Response:
